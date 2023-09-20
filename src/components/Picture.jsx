@@ -11,7 +11,7 @@ const Picture = ({ item }) => {
                 alt={item.title}
                 loading='lazy'
             />
-            <span className='self-end mt-2 bg-cyan bg-opacity-70 rounded w-full p-1 text-white'>{item.category}</span>
+            <span className='self-end mt-2 bg-cyan bg-opacity-70 rounded w-full p-1 text-white text-sm'>{item.category}</span>
         </div>
     )
 }

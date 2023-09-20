@@ -67,7 +67,7 @@ const Login = () => {
 
     return (
         <div className="bg-gray-200 text-white p-4 w-[80%] lg:w-[30%] rounded-xl shadow-2xl">
-            <h1 className='text-md font-bold text-center'>Login</h1>
+            <h1 className='text-xl font-bold text-center'>Login</h1>
             <form className='flex flex-col mt-8 gap-3' action="" onSubmit={signIn}>
                 <div className="flex flex-col">
                     <span className='mb-1 text-sm text-white'>Email</span>
