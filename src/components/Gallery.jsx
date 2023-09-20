@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
-// import { gallery } from '../myData'
 
 import {
   SortableContext,
-  horizontalListSortingStrategy,
+  rectSwappingStrategy,
   rectSortingStrategy
 } from '@dnd-kit/sortable';
+
 import { ProjectContext } from '../App';
+
 import Pictures from './Pictures';
 
 
@@ -25,7 +26,7 @@ const Gallery = () => {
       <div className="grid grid-cols-2 xl:grid-cols-5 gap-2 mx-auto">
         <SortableContext
           items={gallery}
-          strategy={rectSortingStrategy}
+          strategy={rectSwappingStrategy}
         >
           {
             gallery.filter((items) => {
@@ -41,35 +42,10 @@ const Gallery = () => {
             })
           }
         </SortableContext>
-
       </div>
     </main>
   )
 
-  // function handleDragEnd(event) {
-  //   console.log("Drag end called")
-  //   const { active, over } = event;
-  //   console.log(`Active: ${active.id}`);
-  //   console.log(`Over: ${over.id}`);
-
-  //   if (active.id !== over.id) {
-  //     // setTools((items) => {
-  //     //   const activeIndex = items.indexOf(active.id);
-  //     //   const overIndex = items.indexOf(over.id);
-
-  //     //   return arrayMove(items, activeIndex, overIndex);
-  //     // })
-  //     // console.log(tools);
-  //     setGallery((items) => {
-  //       const activeIndex = items.indexOf(active.id);
-  //       const overIndex = items.indexOf(over.id);
-        
-  //       console.log(items)
-  //       return arrayMove(items, activeIndex, overIndex);
-  //     })
-  //     console.log(gallery);
-  //   }
-  // }
 }
 
 export default Gallery

@@ -4,8 +4,6 @@ import { CSS } from '@dnd-kit/utilities'
 import React from 'react'
 
 const Pictures = ({item}) => {
-    // let {item.id, item.categories} = item;
-    // console.log(item.id)
     const {
         attributes,
         listeners,
