@@ -7,7 +7,7 @@ const Gallery = () => {
   const [filter, setFilter] = useState('')
 
   return (
-    <main className='mt-8 p-4 bg-gray-200 rounded shadow-2xl min-h-[40vh]'>
+    <main className='my-8 mx-2 p-4 bg-gray-200 rounded shadow-2xl min-h-[40vh]'>
       <input
         onChange={(e) => { setFilter(e.target.value) }}
         className='p-2 ps-2 mb-3 outline-0 border rounded text-[14px] w-full' placeholder='filter by categories...'

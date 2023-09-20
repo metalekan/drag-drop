@@ -70,20 +70,20 @@ const Login = () => {
             <h1 className='text-md font-bold text-center'>Login</h1>
             <form className='flex flex-col mt-8 gap-3' action="" onSubmit={signIn}>
                 <div className="flex flex-col">
-                    <span className='mb-1 text-sm text-white'>Username</span>
+                    <span className='mb-1 text-sm text-white'>Email</span>
                     <input className={`p-2 text-sm rounded outline-0 border border-gray-100 ${isInput ? "border-red" : "border-gray-100"} bg-[transparent]`} type="email" autoComplete={false} onChange={(e) => setEmail(e.target.value)} />
                     {
-                        isInput ? <small className='text-red animate-pulse'>try again</small> : null
+                        isInput ? <small className='text-red animate-pulse'>email incorrect try again</small> : null
                     }
                 </div>
                 <div className="flex flex-col">
                     <span className='mb-1 text-sm text-white'>Password</span>
                     <input className={`p-2 text-sm rounded outline-0 border border-gray-100 ${isInput ? "border-red" : "border-gray-100"} bg-[transparent]`} type="password" onChange={(e) => setPassword(e.target.value)} />
                     {
-                        isInput ? <small className='text-red animate-pulse'>try again</small> : null
+                        isInput ? <small className='text-red animate-pulse'>password incorrect try again</small> : null
                     }
                 </div>
-                <button className='flex items-center justify-center gap-1 py-1 bg-cyan rounded mt-2 text-gray-300 font-bold'>
+                <button className='flex items-center justify-center gap-1 py-2 bg-cyan rounded mt-2 text-gray-300 font-bold'>
                     <span>Sign in</span>
                     {
                         loading ? <AiOutlineLoading3Quarters className='animate-spin' /> : <FaAnglesRight className='text-gray-200' />
