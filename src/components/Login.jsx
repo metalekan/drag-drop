@@ -66,7 +66,7 @@ const Login = () => {
     }
 
     return (
-        <div className="bg-gray-200 text-white p-4 w-[80%] lg:w-[30%] rounded-xl shadow-2xl">
+        <div className="p-4 rounded-xl bg-gray-200 text-white w-[80%] lg:w-[30%]  shadow-2xl animate__animated animate__zoomIn">
             <h1 className='text-xl font-bold text-center'>Login</h1>
             <form className='flex flex-col mt-8 gap-3' action="" onSubmit={signIn}>
                 <div className="flex flex-col">
