@@ -13,10 +13,10 @@ import Pictures from './Pictures';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('')
-  const {gallery, setGallery} = useContext(ProjectContext);
+  const {gallery} = useContext(ProjectContext);
 
   return (
-    <main className='mt-2 mb-8 mx-2 p-2 md:p-4 bg-gray-200 bg-opacity-60 rounded shadow-2xl min-h-[40vh] animate__animated animate__zoomIn'>
+    <main className='mt-2 mb-8 mx-2 p-2 md:p-4 bg-gray-200 bg-opacity-60 rounded shadow-2xl  min-h-[40vh] animate__animated animate__zoomIn'>
       <h1 className='text-white font-bold text-xl mb-3'>Gallery</h1>
       <input
         onChange={(e) => { setFilter(e.target.value) }}
@@ -26,7 +26,7 @@ const Gallery = () => {
       <div className="grid grid-cols-2 xl:grid-cols-5 gap-2 mx-auto">
         <SortableContext
           items={gallery}
-          strategy={rectSortingStrategy}
+          strategy={rectSwappingStrategy}
         >
           {
             gallery.filter((items) => {

@@ -33,8 +33,8 @@ const App = () => {
         const activeIndex = active.id;
         const overIndex = over.id;
         
-        console.log(activeIndex);
-        console.log(overIndex);
+        // console.log(activeIndex);
+        // console.log(overIndex);
         return arrayMove(items, activeIndex, overIndex);
       })
     }

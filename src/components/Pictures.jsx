@@ -22,7 +22,7 @@ const Pictures = ({item, id}) => {
             style={style}
             {...attributes}
             {...listeners}
-            className={`flex flex-col`}
+            className={`flex flex-col touch-none`}
         >
             <img
                 className='w-[200px] h-[200px] rounded-xl object-cover object-center'
