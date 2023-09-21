@@ -26,21 +26,15 @@ const App = () => {
   )
 
   function handleDragEnd(event) {
-    console.log("Drag end called")
     const { active, over } = event;
-    console.log(`Active: ${active.id}`);
-    console.log(`Over: ${over.id}`);
 
     if (active.id !== over.id) {
       setGallery((items) => {
-        // const activeIndex = items.indexOf(active.id);
-        // const overIndex = items.indexOf(over.id);
         const activeIndex = active.id;
         const overIndex = over.id;
         
         console.log(activeIndex);
         console.log(overIndex);
-        // console.log(items);
         return arrayMove(items, activeIndex, overIndex);
       })
     }
