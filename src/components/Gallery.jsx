@@ -3,7 +3,6 @@ import React, { useContext, useState } from 'react'
 import {
   SortableContext,
   rectSwappingStrategy,
-  rectSortingStrategy
 } from '@dnd-kit/sortable';
 
 import { ProjectContext } from '../App';
