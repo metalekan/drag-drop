@@ -26,7 +26,7 @@ const Gallery = () => {
       <div className="grid grid-cols-2 xl:grid-cols-5 gap-2 mx-auto">
         <SortableContext
           items={gallery}
-          strategy={rectSwappingStrategy}
+          strategy={rectSortingStrategy}
         >
           {
             gallery.filter((items) => {
@@ -35,9 +35,9 @@ const Gallery = () => {
               } else if (items.category.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
                 return items
               }
-            }).map((value) => {
+            }).map((value, index) => {
               return (
-                <Pictures key={value.id} item={value} />
+                <Pictures key={value.id} item={value} id={index} />
               )
             })
           }

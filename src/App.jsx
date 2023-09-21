@@ -41,7 +41,7 @@ const App = () => {
         console.log(activeIndex);
         console.log(overIndex);
         // console.log(items);
-        return arrayMove(items, overIndex, activeIndex);
+        return arrayMove(items, activeIndex, overIndex);
       })
     }
   }

@@ -3,14 +3,14 @@ import { CSS } from '@dnd-kit/utilities'
 
 import React from 'react'
 
-const Pictures = ({item}) => {
+const Pictures = ({item, id}) => {
     const {
         attributes,
         listeners,
         setNodeRef,
         transform,
         transition
-    } = useSortable({id: item.id});
+    } = useSortable({id});
 
     const style = {
         transform: CSS.Transform.toString(transform),
